@@ -1,11 +1,11 @@
 import { FC } from 'react';
 import Head from 'next/head';
 
-type TypeScriptData = {
+type TypeScriptProps = {
     kitId: string;
 };
 
-const TypekitScript: FC<TypeScriptData> = (props: TypeScriptData) => {
+const TypekitScript: FC<TypeScriptProps> = (props: TypeScriptProps) => {
     return (
         <script>
             {`
@@ -22,7 +22,7 @@ const TypekitScript: FC<TypeScriptData> = (props: TypeScriptData) => {
     );
 };
 
-const Typekit: FC<TypeScriptData> = (props: TypeScriptData) => {
+const Typekit: FC<TypeScriptProps> = (props: TypeScriptProps) => {
     return <Head>{TypekitScript(props)}</Head>;
 };
 
