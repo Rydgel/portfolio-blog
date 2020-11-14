@@ -32,13 +32,13 @@ class HeadSeo extends Component<HeadSeoProps> {
 
         image = urljoin(config.siteUrl, config.pathPrefix, image);
         const blogURL = urljoin(config.siteUrl, config.pathPrefix);
-        const schemaOrgJSONLD: any = [
+        const schemaOrgJSONLD: Array<unknown> = [
             {
                 '@context': 'http://schema.org',
                 '@type': 'WebSite',
-                url: blogURL,
-                name: title,
-                alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
+                'url': blogURL,
+                'name': title,
+                'alternateName': config.siteTitleAlt ? config.siteTitleAlt : '',
             },
         ];
 
