@@ -3,6 +3,7 @@ import Category from './category';
 interface Post {
     id: number;
     title: string;
+    description: string;
     content: string;
     display_time: string;
     slug: string;

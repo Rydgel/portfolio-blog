@@ -1,27 +1,28 @@
 import { Component } from 'react';
 import Head from 'next/head';
-import config from '../../config/config';
 import urljoin from 'url-join';
+import Config from '../../interfaces/config';
+import Post from '../../interfaces/post';
 
 type HeadSeoProps = {
-    postNode: string;
+    config: Config;
+    postNode?: Post;
     postPath: string;
     postSEO: boolean;
 };
 
 class HeadSeo extends Component<HeadSeoProps> {
     render(): JSX.Element {
-        const { postNode, postPath, postSEO } = this.props;
+        const { config, postNode, postPath, postSEO } = this.props;
         let title: string;
         let description: string;
         let image: string;
         let postURL: string;
 
-        if (postSEO) {
-            const postMeta = postNode.frontmatter;
-            ({ title } = postMeta);
-            description = postMeta.description ? postMeta.description : postNode.excerpt;
-            image = postMeta.thumbImage ? postMeta.thumbImage.src : config.siteLogo;
+        if (postSEO && postNode) {
+            title = postNode.title;
+            description = postNode.description;
+            image = postNode.image ? postNode.image : config.siteLogo;
 
             postURL = urljoin(config.siteUrl, config.pathPrefix, postPath);
         } else {
