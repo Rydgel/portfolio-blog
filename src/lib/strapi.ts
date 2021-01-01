@@ -28,8 +28,8 @@ export async function getArticleBySlug(slug: string): Promise<Post> {
     return response.data[0];
 }
 
-export async function getArticlesByCategory(cat: number): Promise<Post[]> {
-    const response = await axios.get<Post[]>(`${API_ROOT()}/articles?categories.id=${cat}`);
+export async function getArticlesByCategory(cat: string): Promise<Post[]> {
+    const response = await axios.get<Post[]>(`${API_ROOT()}/articles?categories.name=${cat}`);
     return response.data;
 }
 
