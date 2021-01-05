@@ -9,10 +9,12 @@ type LayoutProps = {
 class Layout extends Component<LayoutProps> {
     render(): JSX.Element {
         return (
-            <div>
+            <div className="text-base">
                 <Header />
                 <div className="mx-auto my-0 max-w-3xl">
-                    <main className="p-4">{this.props.children}</main>
+                    <main lang="en" className="p-4 lg:p-0">
+                        {this.props.children}
+                    </main>
                 </div>
                 <Footer />
             </div>

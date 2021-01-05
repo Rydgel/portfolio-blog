@@ -16,7 +16,7 @@ class Header extends Component<HeaderProps> {
     render(): JSX.Element {
         return (
             <header className="text-base">
-                <nav className="flex flex-wrap items-center justify-between bg-bblue-700 shadow">
+                <nav className="flex flex-wrap items-center justify-between bg-bblue-800 shadow">
                     <div className="lg:order-2 w-auto lg:w-1/5 lg:text-center">
                         <a className="block text-xl text-white font-bold font-heading p-4 lg:p-0 typewriter" href="#">
                             {'./jerome{m}'}
@@ -39,39 +39,39 @@ class Header extends Component<HeaderProps> {
                     </div>
                     <div className="navbar-menu hidden lg:order-1 lg:block w-full lg:w-2/5">
                         <a
-                            className="block p-1 lg:p-4 lg:inline-block mt-4 lg:mt-0 text-white hover:bg-bblue-800"
+                            className="block p-1 lg:p-4 lg:inline-block mt-4 lg:mt-0 text-white hover:bg-bblue-900"
                             href="#"
                         >
                             Home
                         </a>
                         <a
-                            className="block p-1 lg:p-4 lg:inline-block mt-4 lg:mt-0 text-white hover:bg-bblue-800"
+                            className="block p-1 lg:p-4 lg:inline-block mt-4 lg:mt-0 text-white hover:bg-bblue-900"
                             href="#"
                         >
                             Articles
                         </a>
                         <a
-                            className="block p-1 lg:p-4 lg:inline-block mt-4 lg:mt-0 text-white hover:bg-bblue-800"
+                            className="block p-1 lg:p-4 lg:inline-block mt-4 lg:mt-0 text-white hover:bg-bblue-900"
                             href="#"
                         >
-                            Projects
+                            Lab
                         </a>
                     </div>
                     <div className="navbar-menu hidden lg:order-3 lg:block w-full lg:w-2/5 lg:text-right">
                         <a
-                            className="block p-1 lg:p-4 lg:inline-block mt-4 lg:mt-0 text-white hover:bg-bblue-800"
+                            className="block p-1 lg:p-4 lg:inline-block mt-4 lg:mt-0 text-white hover:bg-bblue-900"
                             href="#"
                         >
                             About
                         </a>
                         <a
-                            className="block p-1 lg:p-4 lg:inline-block mt-4 lg:mt-0 text-white hover:bg-bblue-800"
+                            className="block p-1 lg:p-4 lg:inline-block mt-4 lg:mt-0 text-white hover:bg-bblue-900"
                             href="#"
                         >
                             Github
                         </a>
                         <a
-                            className="block p-1 lg:p-4 lg:inline-block mt-4 lg:mt-0 text-white hover:bg-bblue-800"
+                            className="block p-1 lg:p-4 lg:inline-block mt-4 lg:mt-0 text-white hover:bg-bblue-900"
                             href="#"
                         >
                             Contact

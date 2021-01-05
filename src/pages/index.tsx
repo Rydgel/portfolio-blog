@@ -1,5 +1,7 @@
 import { GetStaticProps } from 'next';
+import Image from 'next/image';
 import React, { FC } from 'react';
+import Bio from '../components/design/bio';
 import Layout from '../components/design/layout';
 import Post from '../interfaces/post';
 import { getArticles } from '../lib/strapi';
@@ -11,26 +13,19 @@ type IndexProps = {
 const IndexPage: FC<IndexProps> = (props: IndexProps) => {
     return (
         <Layout>
-            <article className="prose lg:prose-2xl prose-bblue max-w-none">
-                <h1>My articles</h1>
-                <h2>test h2</h2>
-                <h3>test h3</h3>
-                <h4>test h4</h4>
-                <h5>test h5</h5>
-                <p>
-                    Lorem ipsum <a href="">dolor</a> sit amet consectetur adipisicing elit. Rerum mollitia iusto
-                    corrupti at repellat necessitatibus quae cumque, recusandae dicta quos ex est temporibus labore
-                    velit commodi. Quasi totam ipsum quibusdam?
-                </p>
+            <Bio />
+            <section>
+                <h2>Latest articles</h2>
                 {props.articles.map((article) => {
                     return (
                         <div key={article.id}>
-                            <h2>{article.title}</h2>
+                            <h3>{article.title}</h3>
                             <div>{article.description}</div>
                         </div>
                     );
                 })}
-            </article>
+                <h2>Latest experiments</h2>
+            </section>
         </Layout>
     );
 };
