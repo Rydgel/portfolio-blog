@@ -1,5 +1,4 @@
 import { GetStaticProps } from 'next';
-import Image from 'next/image';
 import React, { FC } from 'react';
 import Bio from '../components/design/bio';
 import Layout from '../components/design/layout';
