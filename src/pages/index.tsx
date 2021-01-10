@@ -1,6 +1,5 @@
 import { GetStaticProps } from 'next';
 import React, { FC } from 'react';
-import Bio from '../components/design/bio';
 import Layout from '../components/design/layout';
 import Post from '../interfaces/post';
 import { getArticles } from '../lib/strapi';
@@ -11,8 +10,7 @@ type IndexProps = {
 
 const IndexPage: FC<IndexProps> = (props: IndexProps) => {
     return (
-        <Layout>
-            <Bio />
+        <Layout page="index">
             <section>
                 <h2>Latest articles</h2>
                 {props.articles.map((article) => {

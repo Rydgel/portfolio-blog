@@ -1,83 +1,56 @@
 import { Component } from 'react';
+import Image from 'next/image';
 
 type HeaderProps = {
+    page: string;
     children?: React.ReactNode;
 };
 
 class Header extends Component<HeaderProps> {
-    handleClick(event: React.MouseEvent<HTMLButtonElement, MouseEvent>): void {
-        event.preventDefault();
-        const dropdowns = document.querySelectorAll('.navbar-menu');
-        for (let j = 0; j < dropdowns.length; j++) {
-            dropdowns[j].classList.toggle('hidden');
-        }
+    isBold(comp: string): string {
+        return this.props.page === comp ? 'font-bold' : '';
     }
 
     render(): JSX.Element {
         return (
-            <header className="text-base">
-                <nav className="flex flex-wrap items-center justify-between bg-bblue-800 shadow">
-                    <div className="lg:order-2 w-auto lg:w-1/5 lg:text-center">
-                        <a className="block text-xl text-white font-bold font-heading p-4 lg:p-0 typewriter" href="#">
-                            {'./jerome{m}'}
+            <header className="text-base mb-4">
+                <div className="max-w-5xl flex flex-col lg:flex-row items-center text-center lg:text-left m-auto">
+                    <div role="me" className="leading-none flex flex-grow items-center">
+                        <a href="#" className="p-1 block">
+                            <Image src="/me.png" alt="Jérôme Mahuet" width={64} height={64} className="rounded-full" />
                         </a>
+                        <div>
+                            <a href="#" className="block relative typewriter px-2 py-1 font-bold text-xl text-gray-800">
+                                {'./jerome{m}'}
+                            </a>
+                            <div className="text-xl text-gray-400 pt-0 pr-0 pb-1 pl-2">Software engineer</div>
+                        </div>
                     </div>
-                    <div className="block lg:hidden">
-                        <button
-                            onClick={this.handleClick}
-                            className="navbar-burger flex items-center py-2 px-3 text-white rounded border border-white mr-3"
-                        >
-                            <svg
-                                className="fill-current h-3 w-3"
-                                viewBox="0 0 20 20"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <title>Menu</title>
-                                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-                            </svg>
-                        </button>
-                    </div>
-                    <div className="navbar-menu hidden lg:order-1 lg:block w-full lg:w-2/5">
-                        <a
-                            className="block p-1 lg:p-4 lg:inline-block mt-4 lg:mt-0 text-white hover:bg-bblue-900"
-                            href="#"
-                        >
-                            Home
-                        </a>
-                        <a
-                            className="block p-1 lg:p-4 lg:inline-block mt-4 lg:mt-0 text-white hover:bg-bblue-900"
-                            href="#"
-                        >
-                            Articles
-                        </a>
-                        <a
-                            className="block p-1 lg:p-4 lg:inline-block mt-4 lg:mt-0 text-white hover:bg-bblue-900"
-                            href="#"
-                        >
-                            Lab
-                        </a>
-                    </div>
-                    <div className="navbar-menu hidden lg:order-3 lg:block w-full lg:w-2/5 lg:text-right">
-                        <a
-                            className="block p-1 lg:p-4 lg:inline-block mt-4 lg:mt-0 text-white hover:bg-bblue-900"
-                            href="#"
-                        >
-                            About
-                        </a>
-                        <a
-                            className="block p-1 lg:p-4 lg:inline-block mt-4 lg:mt-0 text-white hover:bg-bblue-900"
-                            href="#"
-                        >
-                            Github
-                        </a>
-                        <a
-                            className="block p-1 lg:p-4 lg:inline-block mt-4 lg:mt-0 text-white hover:bg-bblue-900"
-                            href="#"
-                        >
-                            Contact
-                        </a>
-                    </div>
-                </nav>
+                    <nav className="select-none mt-4 lg:mt-0">
+                        <ul className="text-xl text-gray-800">
+                            <li className="inline-block">
+                                <a href="#" title="Home" className="px-3 py-1">
+                                    <span className={this.isBold('index')}>Home</span>
+                                </a>
+                            </li>
+                            <li className="inline-block">
+                                <a href="#" title="Articles" className="px-3 py-1">
+                                    <span className={this.isBold('articles')}>Articles</span>
+                                </a>
+                            </li>
+                            <li className="inline-block">
+                                <a href="#" title="Experiments" className="px-3 py-1">
+                                    <span className={this.isBold('experiments')}>Experiments</span>
+                                </a>
+                            </li>
+                            <li className="inline-block">
+                                <a href="#" title="About me" className="px-3 py-1">
+                                    <span className={this.isBold('about')}>About me</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </header>
         );
     }
