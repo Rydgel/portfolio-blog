@@ -13,7 +13,7 @@ class Header extends Component<HeaderProps> {
 
     render(): JSX.Element {
         return (
-            <header className="text-base mb-4">
+            <header className="text-base mb-14">
                 <div className="max-w-5xl flex flex-col lg:flex-row items-center text-center lg:text-left m-auto">
                     <div role="me" className="leading-none flex flex-grow items-center">
                         <a href="#" className="p-1 block">

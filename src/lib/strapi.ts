@@ -23,6 +23,11 @@ export async function getArticles(): Promise<Post[]> {
     return response.data;
 }
 
+export async function getRecentArticles(): Promise<Post[]> {
+    const response = await axios.get<Post[]>(`${API_ROOT()}/articles?_limit=5&_sort=display_time:DESC`);
+    return response.data;
+}
+
 export async function getArticleBySlug(slug: string): Promise<Post> {
     const response = await axios.get<Post[]>(`${API_ROOT()}/articles?slug=${slug}`);
     return response.data[0];
