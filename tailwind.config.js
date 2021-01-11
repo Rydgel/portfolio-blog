@@ -8,8 +8,8 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                "bblue": {
-                    '50':  '#f9f9fb',
+                'bblue': {
+                    '50': '#f9f9fb',
                     '100': '#f5f3f8',
                     '200': '#eadff2',
                     '300': '#dec3ec',
@@ -20,16 +20,21 @@ module.exports = {
                     '800': '#4f2a6b',
                     '900': '#3c2351',
                 },
-                "gray": colors.blueGray,
-            }
-        }
+                'gray': colors.blueGray,
+            },
+            typography: (theme) => ({
+                DEFAULT: {
+                    css: {
+                        color: theme('colors.gray.700'),
+                    },
+                },
+            }),
+        },
     },
     variants: {
-        typography: ["responsive", "dark"]
+        typography: ['responsive', 'dark'],
     },
-    plugins: [
-        require('@tailwindcss/typography'),
-    ],
+    plugins: [require('@tailwindcss/typography')],
     future: {
         purgeLayersByDefault: true,
     },

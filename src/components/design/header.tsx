@@ -27,7 +27,7 @@ class Header extends Component<HeaderProps> {
                         </div>
                     </div>
                     <nav className="select-none mt-4 lg:mt-0">
-                        <ul className="text-xl text-gray-800">
+                        <ul className="text-xl text-gray-700">
                             <li className="inline-block">
                                 <a href="#" title="Home" className="px-3 py-1">
                                     <span className={this.isBold('index')}>Home</span>
