@@ -1,4 +1,5 @@
 import { GetStaticProps } from 'next';
+import Link from 'next/link';
 import React, { FC } from 'react';
 import Layout from '../components/design/layout';
 import Post from '../interfaces/post';
@@ -25,7 +26,9 @@ const IndexPage: FC<IndexProps> = (props: IndexProps) => {
 function oneArticleRow(article: Post): React.ReactNode {
     return (
         <div key={article.id}>
-            <h3 className="text-2xl font-medium">{article.title}</h3>
+            <h3 className="text-2xl font-medium">
+                <Link href={`/blog/${article.slug}`}>{article.title}</Link>
+            </h3>
             <p className="text-gray-500">{formatDate(article.display_time)}</p>
             <p className="prose lg:prose-xl">
                 <ReactMarkdown>{article.description}</ReactMarkdown>
