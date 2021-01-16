@@ -28,7 +28,7 @@ export async function getRecentArticles(): Promise<Post[]> {
     return response.data;
 }
 
-export async function getArticleBySlug(slug: string): Promise<Post> {
+export async function getArticleBySlug(slug: string | string[]): Promise<Post> {
     const response = await axios.get<Post[]>(`${API_ROOT()}/articles?slug=${slug}`);
     return response.data[0];
 }

@@ -4,6 +4,7 @@ import Layout from '../components/design/layout';
 import Post from '../interfaces/post';
 import ReactMarkdown from 'react-markdown';
 import { getRecentArticles } from '../lib/strapi';
+import { formatDate } from '../lib/date_utils';
 
 type IndexProps = {
     articles: Post[];
@@ -32,14 +33,6 @@ function oneArticleRow(article: Post): React.ReactNode {
             <hr className="border-t-1 h-0 border-gray-300 my-8" />
         </div>
     );
-}
-
-function formatDate(raw: string): string {
-    return new Intl.DateTimeFormat('en-US', {
-        year: 'numeric',
-        month: 'long',
-        day: '2-digit',
-    }).format(new Date(raw));
 }
 
 export const getStaticProps: GetStaticProps = async () => {

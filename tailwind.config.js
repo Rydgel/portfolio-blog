@@ -26,6 +26,16 @@ module.exports = {
                 DEFAULT: {
                     css: {
                         color: theme('colors.gray.700'),
+                        strong: theme('colors.gray.700'),
+                        a: {
+                            color: theme('colors.gray.500'),
+                            '&:hover': {
+                                color: theme('colors.gray.600'),
+                            },
+                        },
+                        pre: {
+                            'font-family': 'ff-nexus-typewriter, monospace',
+                        },
                     },
                 },
             }),
