@@ -5,6 +5,7 @@ import Layout from '../../components/design/layout';
 import ReactMarkdown from 'react-markdown';
 import { getArticleBySlug, getArticles } from '../../lib/strapi';
 import { formatDate } from '../../lib/date_utils';
+import { MyRenderer } from '../../lib/renderer';
 
 type ArticleProps = {
     article: Post;
@@ -21,7 +22,7 @@ const ArticlePage: FC<ArticleProps> = (props: ArticleProps) => {
                     </time>
                 </header>
                 <section className="prose lg:prose-xl">
-                    <ReactMarkdown>{props.article.content}</ReactMarkdown>
+                    <ReactMarkdown renderers={MyRenderer()}>{props.article.content}</ReactMarkdown>
                 </section>
             </article>
         </Layout>
