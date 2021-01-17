@@ -19,7 +19,7 @@ export async function getSiteConfig(): Promise<Config> {
 }
 
 export async function getArticles(): Promise<Post[]> {
-    const response = await axios.get<Post[]>(`${API_ROOT()}/articles`);
+    const response = await axios.get<Post[]>(`${API_ROOT()}/articles?_sort=display_time:DESC`);
     return response.data;
 }
 
