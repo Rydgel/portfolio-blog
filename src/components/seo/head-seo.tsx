@@ -7,7 +7,7 @@ import Post from '../../interfaces/post';
 type HeadSeoProps = {
     config: Config;
     postNode?: Post;
-    postPath: string;
+    postPath?: string;
     postSEO: boolean;
 };
 
@@ -22,24 +22,24 @@ class HeadSeo extends Component<HeadSeoProps> {
         if (postSEO && postNode) {
             title = postNode.title;
             description = postNode.description;
-            image = postNode.image ? postNode.image : config.siteLogo;
+            image = postNode.image ? postNode.image.url : config.site_logo.url;
 
-            postURL = urljoin(config.siteUrl, config.pathPrefix, postPath);
+            postURL = urljoin(config.site_url, config.path_prefix, postPath);
         } else {
-            title = config.siteTitle;
-            description = config.siteDescription;
-            image = config.siteLogo;
+            title = config.site_title;
+            description = config.site_description;
+            image = config.site_logo.url;
         }
 
-        image = urljoin(config.siteUrl, config.pathPrefix, image);
-        const blogURL = urljoin(config.siteUrl, config.pathPrefix);
+        image = urljoin(config.strapi_url, image);
+        const blogURL = urljoin(config.site_url, config.path_prefix);
         const schemaOrgJSONLD: Array<unknown> = [
             {
                 '@context': 'http://schema.org',
                 '@type': 'WebSite',
                 'url': blogURL,
                 'name': title,
-                'alternateName': config.siteTitleAlt ? config.siteTitleAlt : '',
+                'alternateName': config.site_title_alt ? config.site_title_alt : '',
             },
         ];
 
@@ -65,7 +65,7 @@ class HeadSeo extends Component<HeadSeoProps> {
                     '@type': 'BlogPosting',
                     'url': blogURL,
                     'name': title,
-                    'alternateName': config.siteTitleAlt ? config.siteTitleAlt : '',
+                    'alternateName': config.site_title_alt ? config.site_title_alt : '',
                     'headline': title,
                     'image': {
                         '@type': 'ImageObject',
@@ -79,6 +79,7 @@ class HeadSeo extends Component<HeadSeoProps> {
         return (
             <Head>
                 {/* General tags */}
+                <title>{title}</title>
                 <meta name="description" content={description} />
                 <meta name="image" content={image} />
 
@@ -91,11 +92,11 @@ class HeadSeo extends Component<HeadSeoProps> {
                 <meta property="og:title" content={title} />
                 <meta property="og:description" content={description} />
                 <meta property="og:image" content={image} />
-                <meta property="fb:app_id" content={config.siteFBAppID ? config.siteFBAppID : ''} />
+                <meta property="fb:app_id" content={config.site_fb_app ? config.site_fb_app : ''} />
 
                 {/* Twitter Card tags */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:creator" content={config.userTwitter ? config.userTwitter : ''} />
+                <meta name="twitter:creator" content={config.user_twitter ? config.user_twitter : ''} />
                 <meta name="twitter:title" content={title} />
                 <meta name="twitter:description" content={description} />
                 <meta name="twitter:image" content={image} />

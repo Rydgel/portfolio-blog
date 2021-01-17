@@ -1,4 +1,5 @@
 import Category from './category';
+import Image from './image';
 
 interface Post {
     id: number;
@@ -10,7 +11,7 @@ interface Post {
     published_at: string;
     created_at: string;
     updated_at: string;
-    image?: string;
+    image?: Image;
     categories: Category[];
 }
 

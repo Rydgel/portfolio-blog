@@ -53,6 +53,7 @@ module.exports = {
                         },
                         pre: {
                             'font-family': 'ff-nexus-typewriter, monospace',
+                            'font-size': '15px !important',
                         },
                     },
                 },

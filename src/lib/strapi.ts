@@ -14,8 +14,8 @@ const API_ROOT = () => {
 };
 
 export async function getSiteConfig(): Promise<Config> {
-    const response = await axios.get<Config[]>(`${API_ROOT()}/config`);
-    return response.data[0];
+    const response = await axios.get<Config>(`${API_ROOT()}/config`);
+    return response.data;
 }
 
 export async function getArticles(): Promise<Post[]> {

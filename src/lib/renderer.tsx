@@ -1,5 +1,5 @@
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { nord } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { default as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { ocean } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
 type RendererProps = {
     code: (props: SyntaxProps) => JSX.Element;
@@ -12,7 +12,7 @@ type SyntaxProps = {
 
 export const MySyntax = (props: SyntaxProps): JSX.Element => {
     return (
-        <SyntaxHighlighter style={nord} language={props.language} wrapLongLines={true}>
+        <SyntaxHighlighter style={ocean} language={props.language} wrapLongLines={true}>
             {props.value}
         </SyntaxHighlighter>
     );
