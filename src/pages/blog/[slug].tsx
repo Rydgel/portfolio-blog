@@ -16,18 +16,14 @@ type ArticleProps = {
 };
 
 const ArticlePage: FC<ArticleProps> = (props: ArticleProps) => {
-    const HeaderImage = () => {
+    const headerImage = () => {
         if (props.article.image) {
             const srcImg = urljoin(props.config.strapi_url, props.article.image.url);
-            return (
-                <figure>
-                    <img className="mb-8" src={srcImg} alt={props.article.title} />
-                </figure>
-            );
+            return srcImg;
         }
     };
     return (
-        <Layout page="article">
+        <Layout page="article" headerImage={headerImage()}>
             <HeadSeo
                 config={props.config}
                 postNode={props.article}
@@ -35,7 +31,6 @@ const ArticlePage: FC<ArticleProps> = (props: ArticleProps) => {
                 postSEO={true}
             />
             <article>
-                <HeaderImage />
                 <header>
                     <h1 className="text-3xl lg:text-5xl font-bold block text-center mb-4">{props.article.title}</h1>
                     <time className="block text-center text-gray-500 mb-6">
