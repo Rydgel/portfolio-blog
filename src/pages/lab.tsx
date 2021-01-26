@@ -6,7 +6,6 @@ import Layout from '../components/design/layout';
 import HeadSeo from '../components/seo/head-seo';
 import Config from '../interfaces/config';
 import Experiment from '../interfaces/experiment';
-import { formatDate } from '../lib/date_utils';
 import { getExperiments, getSiteConfig } from '../lib/strapi';
 
 type LabPageProps = {
