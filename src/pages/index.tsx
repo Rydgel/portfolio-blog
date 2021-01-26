@@ -32,7 +32,7 @@ const IndexPage: FC<IndexProps> = (props: IndexProps) => {
 
 function onePostRow(type: string): (post: Post | Experiment) => React.ReactNode {
     return function (post: Post | Experiment): React.ReactNode {
-        const component = () => (
+        const PostRow = () => (
             <div key={post.id}>
                 <h3 className="text-2xl font-medium">
                     <Link href={`/${type}/${post.slug}`}>{post.title}</Link>
@@ -44,8 +44,7 @@ function onePostRow(type: string): (post: Post | Experiment) => React.ReactNode 
                 <hr className="border-t-1 h-0 border-gray-100 my-8" />
             </div>
         );
-        component.displayName = 'PostRow';
-        return component();
+        return PostRow();
     };
 }
 
