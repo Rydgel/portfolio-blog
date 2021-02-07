@@ -13,7 +13,7 @@ class Layout extends Component<LayoutProps> {
         if (this.props.headerImage) {
             return (
                 <figure className="mb-8">
-                    <img className="w-full rounded-md" src={this.props.headerImage} />
+                    <img className="max-w-full lg:max-w-5xl rounded-md mx-auto" src={this.props.headerImage} />
                 </figure>
             );
         }
