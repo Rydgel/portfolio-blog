@@ -5,12 +5,13 @@ import Experiment from '../interfaces/experiment';
 import Post from '../interfaces/post';
 
 const API_ROOT = () => {
-    const environment = process.env.NODE_ENV || 'development';
+    /*const environment = process.env.NODE_ENV || 'development';
     if (environment == 'production') {
         return 'https://api.jeromem.dev';
     } else {
         return 'http://localhost:1337';
-    }
+    }*/
+    return 'https://api.jeromem.dev';
 };
 
 export async function getSiteConfig(): Promise<Config> {
