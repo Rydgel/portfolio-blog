@@ -23,8 +23,7 @@ const LabPage: FC<LabPageProps> = (props: LabPageProps) => {
                     {props.experiments.map((experiment) => {
                         const headerImage = () => {
                             if (experiment.image) {
-                                const srcImg = urljoin(props.config.strapi_url, experiment.image.url);
-                                return srcImg;
+                                return urljoin(props.config.strapi_url, experiment.image.url);
                             }
                         };
                         return (
