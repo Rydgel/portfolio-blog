@@ -2,6 +2,7 @@ const colors = require('tailwindcss/colors');
 
 module.exports = {
     important: false,
+    darkMode: 'class',
     purge: {
         content: ['./pages/**/*.tsx', './components/**/*.tsx'],
     },
@@ -57,11 +58,50 @@ module.exports = {
                         },
                     },
                 },
+
+                dark: {
+                    css: {
+                        color: theme('colors.gray.400'),
+                        strong: theme('colors.gray.400'),
+                        h1: {
+                            color: theme('colors.gray.300'),
+                        },
+                        h2: {
+                            color: theme('colors.gray.300'),
+                        },
+                        h3: {
+                            color: theme('colors.gray.300'),
+                        },
+                        h4: {
+                            color: theme('colors.gray.300'),
+                        },
+                        h5: {
+                            color: theme('colors.gray.300'),
+                        },
+                        h6: {
+                            color: theme('colors.gray.300'),
+                        },
+                        a: {
+                            color: theme('colors.gray.300'),
+                            '&:hover': {
+                                color: theme('colors.gray.200'),
+                            },
+                        },
+                        img: {
+                            'opacity': '0.9',
+                        },
+                        pre: {
+                            'font-family': 'ff-nexus-typewriter, monospace',
+                            'font-size': '15px !important',
+                        },
+                    },
+                },
             }),
         },
     },
     variants: {
         typography: ['responsive', 'dark'],
+        opacity: ['dark'],
     },
     plugins: [require('@tailwindcss/typography')],
     future: {

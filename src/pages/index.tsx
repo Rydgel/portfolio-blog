@@ -37,11 +37,11 @@ function onePostRow(type: string): (post: Post | Experiment) => React.ReactNode 
                 <h3 className="text-3xl font-medium">
                     <Link href={`/${type}/${post.slug}`}>{post.title}</Link>
                 </h3>
-                <p className="text-gray-400 italic">{formatDate(post.display_time)}</p>
-                <div className="prose lg:prose-xl">
+                <p className="text-gray-400 dark:text-gray-600 italic">{formatDate(post.display_time)}</p>
+                <div className="prose lg:prose-xl dark:prose-dark dark:lg:prose-dark-xl">
                     <ReactMarkdown>{post.description}</ReactMarkdown>
                 </div>
-                <hr className="border-t-1 h-0 border-gray-100 my-8" />
+                <hr className="border-t-1 h-0 border-gray-100 dark:border-gray-900 my-8" />
             </div>
         );
         return PostRow();

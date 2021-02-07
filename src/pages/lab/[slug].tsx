@@ -37,7 +37,7 @@ const LabPage: FC<LabProps> = (props: LabProps) => {
                         {formatDate(props.experiment.display_time)}
                     </time>
                 </header>
-                <section className="prose lg:prose-xl">
+                <section className="prose lg:prose-xl dark:prose-dark dark:lg:dark-prose-xl">
                     <ReactMarkdown renderers={MyRenderer()}>{props.experiment.content}</ReactMarkdown>
                 </section>
             </article>

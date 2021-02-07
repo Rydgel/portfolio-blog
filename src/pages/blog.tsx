@@ -20,7 +20,10 @@ const ArticlePage: FC<ArticlePageProps> = (props: ArticlePageProps) => {
             <section>
                 <h2 className="text-5xl font-bold block text-center mb-14">Articles</h2>
                 {props.articles.map((article) => (
-                    <div key={`article_page_id_${article.id}`} className="prose lg:prose-xl">
+                    <div
+                        key={`article_page_id_${article.id}`}
+                        className="prose lg:prose-xl dark:prose-dark dark:lg:dark-prose-xl"
+                    >
                         <Link href={`/blog/${article.slug}`}>{article.title}</Link> —{' '}
                         <span className="text-gray-500">{formatDate(article.display_time)}</span>
                     </div>

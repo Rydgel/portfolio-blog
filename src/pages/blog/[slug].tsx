@@ -37,7 +37,7 @@ const ArticlePage: FC<ArticleProps> = (props: ArticleProps) => {
                         {formatDate(props.article.display_time)}
                     </time>
                 </header>
-                <section className="prose lg:prose-xl">
+                <section className="prose lg:prose-xl dark:prose-dark dark:lg:prose-xl-dark">
                     <ReactMarkdown renderers={MyRenderer()}>{props.article.content}</ReactMarkdown>
                 </section>
             </article>

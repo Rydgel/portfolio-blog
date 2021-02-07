@@ -14,7 +14,7 @@ const AboutMePage: FC<AboutMeProps> = (props: AboutMeProps) => {
         <Layout page="about">
             <HeadSeo config={props.config} postSEO={false} />
             <section>
-                <div className="prose lg:prose-xl">
+                <div className="prose lg:prose-xl dark:prose-dark dark:lg:prose-dark-xl">
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tenetur harum quos, repellat
                         nihil porro nostrum, culpa at adipisci rem corrupti ad expedita ex? Voluptatibus esse veritatis

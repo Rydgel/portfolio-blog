@@ -30,7 +30,7 @@ class Header extends Component<HeaderProps> {
                         </Link>
                         <div>
                             <Link href="/">
-                                <a className="block relative typewriter px-2 py-1 font-bold text-xl text-gray-800">
+                                <a className="block relative typewriter px-2 py-1 font-bold text-xl text-gray-800 dark:text-gray-100">
                                     {'./jerome{m}'}
                                 </a>
                             </Link>
@@ -39,7 +39,7 @@ class Header extends Component<HeaderProps> {
                         </div>
                     </div>
                     <nav className="select-none mt-4 lg:mt-0">
-                        <ul className="text-xl text-gray-700">
+                        <ul className="text-xl text-gray-700 dark:text-gray-200">
                             <li className="inline-block">
                                 <Link href="/">
                                     <a title="Home" className="px-3 py-1">

@@ -30,9 +30,9 @@ const LabPage: FC<LabPageProps> = (props: LabPageProps) => {
                         return (
                             <div key={`article_lab_id_${experiment.id}`} className="mb-16 w-full relative">
                                 <Link href={`/lab/${experiment.slug}`}>
-                                    <img src={headerImage()} className="rounded-md cursor-pointer" />
+                                    <img src={headerImage()} className="rounded-md cursor-pointer dark:opacity-90" />
                                 </Link>
-                                <div className="prose lg:prose-xl bottom-0 w-full pt-3">
+                                <div className="prose lg:prose-xl dark:prose-dark lg:dark:prose-xl-dark bottom-0 w-full pt-3">
                                     <div className="text-2xl font-medium">{experiment.title}</div>
                                     <div className="text-gray-600">{experiment.description}</div>
                                     <Link href={`/lab/${experiment.slug}`}>Read full story</Link>

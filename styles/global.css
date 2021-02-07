@@ -4,9 +4,14 @@
 
 @import url("https://use.typekit.net/pjh1zlv.css");
 
+* {
+    transition-property: background-color, border-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
 body {
     font-family: ratio, serif;
-    padding: 24px 24px 32px;
 }
 
 .typewriter {
