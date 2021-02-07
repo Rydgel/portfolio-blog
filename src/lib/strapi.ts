@@ -7,8 +7,7 @@ import Post from '../interfaces/post';
 const API_ROOT = () => {
     const environment = process.env.NODE_ENV || 'development';
     if (environment == 'production') {
-        // todo, change url for prod
-        return '';
+        return 'https://api.jeromem.dev';
     } else {
         return 'http://localhost:1337';
     }
