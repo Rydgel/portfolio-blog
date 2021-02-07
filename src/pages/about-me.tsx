@@ -1,5 +1,6 @@
 import { GetStaticProps } from 'next';
 import React, { FC } from 'react';
+import { SiGithub, SiTwitter, SiMinutemailer } from 'react-icons/si';
 import Layout from '../components/design/layout';
 import { getSiteConfig } from '../lib/strapi';
 import HeadSeo from '../components/seo/head-seo';
@@ -15,11 +16,43 @@ const AboutMePage: FC<AboutMeProps> = (props: AboutMeProps) => {
             <HeadSeo config={props.config} postSEO={false} />
             <section>
                 <div className="prose lg:prose-xl dark:prose-dark dark:lg:prose-dark-xl">
+                    <h2 className="text-5xl font-bold block text-center mb-14">About me</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tenetur harum quos, repellat
-                        nihil porro nostrum, culpa at adipisci rem corrupti ad expedita ex? Voluptatibus esse veritatis
-                        incidunt culpa placeat.
+                        Web <em>&amp;</em> mobile developer with a soft spot for typography and functional programming.
+                        I’ve been working in the field for 15 years and I’m still looking to improve and use the latest
+                        technologies for the job. I’m also interested in 3D rendering and the making of video games. My
+                        favorite languages right now are <a href="https://www.rust-lang.org/">Rust</a>,{' '}
+                        <a href="https://www.typescriptlang.org/">Typescript</a>,{' '}
+                        <a href="https://www.haskell.org/">Haskell</a> <em>&amp;</em>{' '}
+                        <a href="https://elixir-lang.org/">Elixir</a>.
+                        <br />
+                        Feel free to contact me.
                     </p>
+                    <h3>Find me on</h3>
+                </div>
+                <div className="mt-4">
+                    <section className="text-base lg:text-xl">
+                        <ul>
+                            <li className="mb-2">
+                                <a href="mailto:jerome.mahuet@gmail.com" className="no-underline hover:underline">
+                                    <SiMinutemailer className="inline-block mr-3" />
+                                    Email
+                                </a>
+                            </li>
+                            <li className="mb-2">
+                                <a href="https://github.com/Rydgel" className="no-underline hover:underline">
+                                    <SiGithub className="inline-block mr-3" />
+                                    GitHub
+                                </a>
+                            </li>
+                            <li className="mb-2">
+                                <a href="https://twitter.com/rydgel" className="no-underline hover:underline">
+                                    <SiTwitter className="inline-block mr-3" />
+                                    Twitter
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
                 </div>
             </section>
         </Layout>
