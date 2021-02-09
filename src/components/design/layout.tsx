@@ -24,7 +24,7 @@ class Layout extends Component<LayoutProps> {
     render(): JSX.Element {
         return (
             <>
-                <div className="bg-white dark:bg-black dark:antialiased">
+                <div className="bg-white dark:bg-dark-bg dark:antialiased">
                     <div className="text-base text-gray-700 dark:text-gray-200 p-8 min-h-screen">
                         <Header page={this.props.page} />
                         {this.props.headerImage && this.headerImage()}
