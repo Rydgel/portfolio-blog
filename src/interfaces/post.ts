@@ -1,7 +1,8 @@
 import Category from './category';
+import Content from './content';
 import Image from './image';
 
-interface Post {
+interface Post extends Content {
     id: number;
     title: string;
     description: string;

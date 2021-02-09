@@ -1,6 +1,7 @@
+import Content from './content';
 import Image from './image';
 
-interface Experiment {
+interface Experiment extends Content {
     id: number;
     title: string;
     description: string;
