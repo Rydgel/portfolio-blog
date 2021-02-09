@@ -101,6 +101,7 @@ module.exports = {
     },
     variants: {
         typography: ['responsive', 'dark'],
+        fontSmoothing: ['dark'],
         opacity: ['dark'],
     },
     plugins: [require('@tailwindcss/typography')],
