@@ -20,10 +20,11 @@ const AboutMePage: FC<AboutMeProps> = (props: AboutMeProps) => {
                     <div className="prose lg:prose-xl dark:prose-dark dark:lg:prose-dark-xl">
                         <p className="text-center">
                             Web <em>&amp;</em> mobile developer with a soft spot for typography and functional
-                            programming. I’ve been working in the field for 15 years and I’m still looking to improve
-                            and use the latest technologies for the job. I’m also interested in 3D rendering and the
-                            making of video games. My favorite languages right now are{' '}
-                            <a href="https://www.rust-lang.org/">Rust</a>,{' '}
+                            programming. I’ve been working in the field of web development for 15 years and I’m still
+                            looking to improve and use the latest technologies for the job. I’m also interested in 3D
+                            rendering and the making of video games.
+                            <br />
+                            My favorite languages right now are <a href="https://www.rust-lang.org/">Rust</a>,{' '}
                             <a href="https://www.typescriptlang.org/">Typescript</a>,{' '}
                             <a href="https://www.haskell.org/">Haskell</a> and{' '}
                             <a href="https://elixir-lang.org/">Elixir</a>.
