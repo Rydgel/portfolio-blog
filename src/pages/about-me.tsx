@@ -34,8 +34,8 @@ const AboutMePage: FC<AboutMeProps> = (props: AboutMeProps) => {
                         <h3 className="text-center">Find me on</h3>
                     </div>
                 </div>
-                <div className="mt-4">
-                    <section className="text-base lg:text-xl">
+                <div className="mt-8 typewriter">
+                    <section className="text-base">
                         <ul className="text-center">
                             <li className="mb-2">
                                 <a href="mailto:jerome.mahuet@gmail.com" className="no-underline hover:underline">
