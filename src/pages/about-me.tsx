@@ -37,21 +37,21 @@ const AboutMePage: FC<AboutMeProps> = (props: AboutMeProps) => {
                 <div className="mt-8 typewriter">
                     <section className="text-base">
                         <ul className="text-center">
-                            <li className="mb-2">
+                            <li className="mb-4">
                                 <a href="mailto:jerome.mahuet@gmail.com" className="no-underline hover:underline">
-                                    <SiMinutemailer className="inline-block mr-3" />
+                                    <SiMinutemailer size="1.5em" className="inline-block mr-6" />
                                     jerome.mahuet@gmail.com
                                 </a>
                             </li>
-                            <li className="mb-2">
+                            <li className="mb-4">
                                 <a href="https://github.com/rydgel" className="no-underline hover:underline">
-                                    <SiGithub className="inline-block mr-3" />
+                                    <SiGithub size="1.5em" className="inline-block mr-6" />
                                     https://github.com/rydgel
                                 </a>
                             </li>
-                            <li className="mb-2">
+                            <li className="mb-4">
                                 <a href="https://twitter.com/rydgel" className="no-underline hover:underline">
-                                    <SiTwitter className="inline-block mr-3" />
+                                    <SiTwitter size="1.5em" className="inline-block mr-6" />
                                     https://twitter.com/rydgel
                                 </a>
                             </li>
