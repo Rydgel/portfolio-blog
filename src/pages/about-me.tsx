@@ -39,19 +39,16 @@ const AboutMePage: FC<AboutMeProps> = (props: AboutMeProps) => {
                         <ul className="text-center">
                             <li className="mb-4">
                                 <a href="mailto:jerome.mahuet@gmail.com" className="no-underline hover:underline">
-                                    <SiMinutemailer size="1.5em" className="inline-block mr-6" />
                                     jerome.mahuet@gmail.com
                                 </a>
                             </li>
                             <li className="mb-4">
                                 <a href="https://github.com/rydgel" className="no-underline hover:underline">
-                                    <SiGithub className="inline-block mr-3" />
                                     github.com/rydgel
                                 </a>
                             </li>
                             <li className="mb-4">
                                 <a href="https://twitter.com/rydgel" className="no-underline hover:underline">
-                                    <SiTwitter className="inline-block mr-3" />
                                     twitter.com/rydgel
                                 </a>
                             </li>
