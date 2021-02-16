@@ -1,6 +1,5 @@
 import { GetStaticProps } from 'next';
 import React, { FC } from 'react';
-import { SiGithub, SiTwitter, SiMinutemailer } from 'react-icons/si';
 import Layout from '../components/design/layout';
 import { getSiteConfig } from '../lib/strapi';
 import HeadSeo from '../components/seo/head-seo';
