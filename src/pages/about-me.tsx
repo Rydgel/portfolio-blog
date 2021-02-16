@@ -46,13 +46,13 @@ const AboutMePage: FC<AboutMeProps> = (props: AboutMeProps) => {
                             <li className="mb-2">
                                 <a href="https://github.com/rydgel" className="no-underline hover:underline">
                                     <SiGithub className="inline-block mr-3" />
-                                    https://github.com/rydgel
+                                    github.com/rydgel
                                 </a>
                             </li>
                             <li className="mb-2">
                                 <a href="https://twitter.com/rydgel" className="no-underline hover:underline">
                                     <SiTwitter className="inline-block mr-3" />
-                                    https://twitter.com/rydgel
+                                    twitter.com/rydgel
                                 </a>
                             </li>
                         </ul>
