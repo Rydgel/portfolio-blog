@@ -1,5 +1,5 @@
 import { default as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { shadesOfPurple as cstyle } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+import { hybrid as cstyle } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
 type RendererProps = {
     code: (props: SyntaxProps) => JSX.Element;

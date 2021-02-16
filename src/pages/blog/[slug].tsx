@@ -3,6 +3,7 @@ import React, { FC } from 'react';
 import Post from '../../interfaces/post';
 import Layout from '../../components/design/layout';
 import ReactMarkdown from 'react-markdown';
+import gfm from 'remark-gfm';
 import { getArticleBySlug, getArticles, getSiteConfig } from '../../lib/strapi';
 import { formatDate } from '../../lib/date_utils';
 import { MyRenderer } from '../../lib/renderer';
@@ -38,7 +39,9 @@ const ArticlePage: FC<ArticleProps> = (props: ArticleProps) => {
                     </time>
                 </header>
                 <section className="prose lg:prose-xl dark:prose-dark dark:lg:prose-xl-dark">
-                    <ReactMarkdown renderers={MyRenderer()}>{props.article.content}</ReactMarkdown>
+                    <ReactMarkdown renderers={MyRenderer()} plugins={[gfm]}>
+                        {props.article.content}
+                    </ReactMarkdown>
                 </section>
             </article>
         </Layout>

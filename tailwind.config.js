@@ -17,6 +17,23 @@ module.exports = {
                     css: {
                         color: theme('colors.gray.700'),
                         strong: theme('colors.gray.700'),
+                        code: {
+                            'font-family': 'zeitung-mono, monospace',
+                            color: theme('colors.gray.700'),
+                        },
+                        blockquote: {
+                            color: theme('colors.gray.400'),
+                            'border-left-color': theme('colors.gray.400'),
+                        },
+                        thead: {
+                            th: {
+                                color: theme('colors.gray.700'),
+                            },
+                        },
+                        tr: {
+                            'border-bottom-color': theme('colors.gray.200'),
+                            'text-align': 'center',
+                        },
                         h1: {
                             color: theme('colors.gray.700'),
                         },
@@ -42,7 +59,7 @@ module.exports = {
                             },
                         },
                         pre: {
-                            'font-family': 'ff-nexus-typewriter, monospace',
+                            'font-family': 'zeitung-mono, monospace',
                             'font-size': '15px !important',
                         },
                     },
@@ -52,6 +69,23 @@ module.exports = {
                     css: {
                         color: theme('colors.gray.400'),
                         strong: theme('colors.gray.400'),
+                        code: {
+                            'font-family': 'zeitung-mono, monospace',
+                            color: theme('colors.gray.400'),
+                        },
+                        blockquote: {
+                            color: theme('colors.gray.700'),
+                            'border-left-color': theme('colors.gray.700'),
+                        },
+                        thead: {
+                            th: {
+                                color: theme('colors.gray.400'),
+                            },
+                        },
+                        tr: {
+                            'border-bottom-color': theme('colors.gray.700'),
+                            'text-align': 'center',
+                        },
                         h1: {
                             color: theme('colors.gray.300'),
                         },
@@ -80,7 +114,7 @@ module.exports = {
                             'opacity': '0.9',
                         },
                         pre: {
-                            'font-family': 'ff-nexus-typewriter, monospace',
+                            'font-family': 'zeitung-mono, monospace',
                             'font-size': '15px !important',
                         },
                     },
