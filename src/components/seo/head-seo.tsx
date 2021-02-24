@@ -21,7 +21,7 @@ class HeadSeo extends Component<HeadSeoProps> {
         let postURL: string;
 
         if (postSEO && postNode) {
-            title = postNode.title;
+            title = `${config.site_title_short} - ${postNode.title}`;
             description = postNode.description;
             image = postNode.image ? postNode.image.url : config.site_logo.url;
 
