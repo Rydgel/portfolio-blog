@@ -33,7 +33,7 @@ const LabPage: FC<LabProps> = (props: LabProps) => {
             />
             <article>
                 <header>
-                    <h1 className="text-3xl lg:text-5xl font-bold block text-center mb-4 capitalize">
+                    <h1 className="text-3xl lg:text-5xl font-bold block text-center mb-4 capitalize lg:leading-tight">
                         {props.experiment.title}
                     </h1>
                     <time className="block text-center text-gray-500 mb-6 italic">
