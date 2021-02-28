@@ -12,7 +12,7 @@ type LayoutProps = {
 class Layout extends Component<LayoutProps> {
     headerImage(): JSX.Element {
         return (
-            <figure>
+            <figure className="mb-8">
                 <img
                     className="max-w-full lg:max-w-5xl rounded-md mx-auto dark:opacity-90"
                     src={this.props.headerImage}
