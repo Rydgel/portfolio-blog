@@ -32,7 +32,7 @@ const LabPage: FC<LabPageProps> = (props: LabPageProps) => {
                                     <img src={headerImage()} className="rounded-md cursor-pointer dark:opacity-90" />
                                 </Link>
                                 <div className="prose lg:prose-xl dark:prose-dark lg:dark:prose-xl-dark bottom-0 w-full pt-3">
-                                    <div className="text-2xl font-medium">{experiment.title}</div>
+                                    <span className="text-2xl font-medium capitalize">{experiment.title}</span>
                                     <div className="text-gray-600">{experiment.description}</div>
                                     <Link href={`/lab/${experiment.slug}`}>Read full story</Link>
                                 </div>

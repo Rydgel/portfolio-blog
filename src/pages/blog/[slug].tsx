@@ -33,7 +33,9 @@ const ArticlePage: FC<ArticleProps> = (props: ArticleProps) => {
             />
             <article>
                 <header>
-                    <h1 className="text-3xl lg:text-5xl font-bold block text-center mb-4">{props.article.title}</h1>
+                    <h1 className="text-3xl lg:text-5xl font-bold block text-center mb-4 capitalize">
+                        {props.article.title}
+                    </h1>
                     <time className="block text-center text-gray-500 mb-6">
                         {formatDate(props.article.display_time)}
                     </time>
