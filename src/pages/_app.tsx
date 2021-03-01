@@ -1,5 +1,6 @@
 import { FC, useState, useEffect } from 'react';
 import { AppProps } from 'next/app';
+import dynamic from 'next/dynamic';
 import { ThemeProvider } from '../components/theme/themeContext';
 import Umami from '../components/analytics/umami';
 
@@ -11,12 +12,23 @@ const App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
     useEffect(() => {
         setIsMounted(true);
     }, []);
-    return (
-        <ThemeProvider>
-            <Umami />
-            {isMounted && <Component {...pageProps} />}
-        </ThemeProvider>
-    );
+
+    // we skip theme detection for SSR
+    if (!isMounted) {
+        return (
+            <>
+                <Umami />
+                <Component {...pageProps} />
+            </>
+        );
+    } else {
+        return (
+            <ThemeProvider>
+                <Umami />
+                {isMounted && <Component {...pageProps} />}
+            </ThemeProvider>
+        );
+    }
 };
 
 export default App;
