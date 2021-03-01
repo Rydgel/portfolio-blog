@@ -1,5 +1,6 @@
 import { GetServerSideProps } from 'next';
 import { FC } from 'react';
+import beautifier from 'xml-beautifier';
 import Content from '../interfaces/content';
 import { getArticles, getExperiments } from '../lib/strapi';
 
@@ -46,7 +47,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
     context.res.setHeader('Content-Type', 'text/xml');
     if (articles.length > 0) {
-        context.res.write(generateRss(all_content));
+        context.res.write(beautifier(generateRss(all_content)));
     }
     context.res.end();
 

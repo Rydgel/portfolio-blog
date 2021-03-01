@@ -249,7 +249,7 @@
     "eslint-scope" "^5.0.0"
     "eslint-utils" "^2.0.0"
 
-"@typescript-eslint/parser@^4.0.0", "@typescript-eslint/parser@^4.15.2":
+"@typescript-eslint/parser@^4.15.2":
   "integrity" "sha512-SHeF8xbsC6z2FKXsaTb1tBCf0QZsjJ94H6Bo51Y1aVEZ4XAefaw5ZAilMoDPlGghe+qtq7XdTiDlGfVTOmvA+Q=="
   "resolved" "https://registry.npmjs.org/@typescript-eslint/parser/-/parser-4.15.2.tgz"
   "version" "4.15.2"
@@ -1374,7 +1374,7 @@
   "resolved" "https://registry.npmjs.org/eslint-visitor-keys/-/eslint-visitor-keys-2.0.0.tgz"
   "version" "2.0.0"
 
-"eslint@*", "eslint@^5.0.0 || ^6.0.0 || ^7.0.0", "eslint@^7.20.0":
+"eslint@^7.20.0":
   "integrity" "sha512-qGi0CTcOGP2OtCQBgWZlQjcTuP0XkIpYFj25XtRTQSHC+umNnp7UMshr2G8SLsRFYDdAPFeHOsiteadmMH02Yw=="
   "resolved" "https://registry.npmjs.org/eslint/-/eslint-7.20.0.tgz"
   "version" "7.20.0"
@@ -3400,7 +3400,7 @@
   dependencies:
     "mdast-util-from-markdown" "^0.8.0"
 
-"repeat-string@^1.0.0":
+"repeat-string@^1.0.0", "repeat-string@1.6.1":
   "integrity" "sha1-jcrkcOHIirwtYA//Sndihtp15jc="
   "resolved" "https://registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz"
   "version" "1.6.1"
@@ -4278,6 +4278,13 @@
   "integrity" "sha512-hr6vCR76GsossIRsr8OLR9acVVm1jyfEWvhbNjtgPOrfvAlKzvyeg/P6r8RuDjRyrcQoPQT7K0DGEPc7Ae6jzA=="
   "resolved" "https://registry.npmjs.org/ws/-/ws-7.4.3.tgz"
   "version" "7.4.3"
+
+"xml-beautifier@^0.4.3":
+  "integrity" "sha512-jtqVgG2mXX+mZYSq80tPWBcrtPGL3JwCtcME52c7Aau1R34quuJw86R9A+KFO7F6EQAaagUmMXGhDRKGV3UXhw=="
+  "resolved" "https://registry.npmjs.org/xml-beautifier/-/xml-beautifier-0.4.3.tgz"
+  "version" "0.4.3"
+  dependencies:
+    "repeat-string" "1.6.1"
 
 "xtend@^4.0.0", "xtend@^4.0.1", "xtend@^4.0.2":
   "integrity" "sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ=="

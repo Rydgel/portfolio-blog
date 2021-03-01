@@ -36,7 +36,8 @@
     "react-syntax-highlighter": "^15.4.3",
     "remark-gfm": "^1.0.0",
     "tailwindcss": "^2.0.3",
-    "url-join": "^4.0.1"
+    "url-join": "^4.0.1",
+    "xml-beautifier": "^0.4.3"
   },
   "scripts": {
     "dev": "next dev",
