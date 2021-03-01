@@ -14,11 +14,7 @@ const App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
 
     // we skip theme detection for SSR
     if (!isMounted) {
-        return (
-            <>
-                <Component {...pageProps} />
-            </>
-        );
+        return <Component {...pageProps} />;
     } else {
         return (
             <ThemeProvider>
