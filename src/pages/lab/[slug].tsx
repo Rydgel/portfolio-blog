@@ -1,4 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
+import { useRouter } from 'next/router';
 import React, { FC } from 'react';
 import Layout from '../../components/design/layout';
 import ReactMarkdown from 'react-markdown';
@@ -17,6 +18,12 @@ type LabProps = {
 };
 
 const LabPage: FC<LabProps> = (props: LabProps) => {
+    const router = useRouter();
+
+    if (router.isFallback) {
+        return <></>;
+    }
+
     const headerImage = () => {
         if (props.experiment.image) {
             const srcImg = urljoin(props.config.strapi_url, props.experiment.image.url);

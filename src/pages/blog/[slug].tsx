@@ -1,4 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
+import { useRouter } from 'next/router';
 import React, { FC } from 'react';
 import Post from '../../interfaces/post';
 import Layout from '../../components/design/layout';
@@ -17,6 +18,12 @@ type ArticleProps = {
 };
 
 const ArticlePage: FC<ArticleProps> = (props: ArticleProps) => {
+    const router = useRouter();
+
+    if (router.isFallback) {
+        return <></>;
+    }
+
     const headerImage = () => {
         if (props.article.image) {
             const srcImg = urljoin(props.config.strapi_url, props.article.image.url);
