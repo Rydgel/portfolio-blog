@@ -1,6 +1,5 @@
 import { FC, useState, useEffect } from 'react';
 import { AppProps } from 'next/app';
-import dynamic from 'next/dynamic';
 import { ThemeProvider } from '../components/theme/themeContext';
 import Umami from '../components/analytics/umami';
 
@@ -17,7 +16,6 @@ const App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
     if (!isMounted) {
         return (
             <>
-                <Umami />
                 <Component {...pageProps} />
             </>
         );
