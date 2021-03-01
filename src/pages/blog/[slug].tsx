@@ -51,17 +51,18 @@ const ArticlePage: FC<ArticleProps> = (props: ArticleProps) => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-    try {
-        const config = await getSiteConfig();
-        const article = await getArticleBySlug(params.slug);
+    const config = await getSiteConfig();
+    const article = await getArticleBySlug(params.slug);
+
+    if (!article) {
         return {
-            props: { config, article },
-            revalidate: 300,
+            notFound: true,
         };
-    } catch (error) {}
+    }
 
     return {
-        notFound: true,
+        props: { config, article },
+        revalidate: 300,
     };
 };
 
