@@ -25,7 +25,7 @@ const ArticlePage: FC<ArticlePageProps> = (props: ArticlePageProps) => {
                         className="prose lg:prose-xl dark:prose-dark dark:lg:dark-prose-xl"
                     >
                         <Link href={`/blog/${article.slug}`}>
-                            <span className="capitalize">{article.title}</span>
+                            <a className="capitalize">{article.title}</a>
                         </Link>{' '}
                         — <span className="text-gray-500">{formatDate(article.display_time)}</span>
                     </div>
