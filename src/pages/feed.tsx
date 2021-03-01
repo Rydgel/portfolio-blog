@@ -28,7 +28,7 @@ const generateRss = (posts: Content[]): string => `
     <channel>
       <title>Jerome{m}</title>
       <link>https://jeromem.dev</link>
-      <description>todo description</description>
+      <description>Web &amp; mobile developer with a soft spot for typography and functional programming.</description>
       <language>en</language>
       <lastBuildDate>${new Date(posts[0].display_time).toUTCString()}</lastBuildDate>
       <atom:link href="https://jeromem.dev/feed" rel="self" type="application/rss+xml"/>
