@@ -67,7 +67,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
                 slug: experiment.slug,
             },
         })),
-        fallback: false,
+        fallback: true,
     };
 };
 
