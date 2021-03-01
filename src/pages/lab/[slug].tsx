@@ -53,6 +53,13 @@ const LabPage: FC<LabProps> = (props: LabProps) => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
     const config = await getSiteConfig();
     const experiment = await getExperimentBySlug(params.slug);
+
+    if (!experiment) {
+        return {
+            notFound: true,
+        };
+    }
+
     return {
         props: { config, experiment },
         revalidate: 1,
@@ -67,7 +74,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
                 slug: experiment.slug,
             },
         })),
-        fallback: true,
+        fallback: 'blocking',
     };
 };
 

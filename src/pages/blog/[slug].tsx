@@ -53,6 +53,13 @@ const ArticlePage: FC<ArticleProps> = (props: ArticleProps) => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
     const config = await getSiteConfig();
     const article = await getArticleBySlug(params.slug);
+
+    if (!article) {
+        return {
+            notFound: true,
+        };
+    }
+
     return {
         props: { config, article },
         revalidate: 1,
@@ -67,7 +74,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
                 slug: article.slug,
             },
         })),
-        fallback: true,
+        fallback: 'blocking',
     };
 };
 
