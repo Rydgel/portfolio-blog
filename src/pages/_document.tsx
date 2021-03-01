@@ -2,7 +2,7 @@ import Document, { Html, Head, Main, NextScript, DocumentContext, DocumentInitia
 
 function setInitialColorMode() {
     function getInitialColorMode() {
-        const preference = window.localStorage.getItem('theme');
+        const preference = window.localStorage.getItem('color-theme');
         let hasPreference = typeof preference === 'string';
 
         /**
