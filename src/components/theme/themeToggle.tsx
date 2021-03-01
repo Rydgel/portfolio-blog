@@ -5,6 +5,10 @@ import { ThemeContext } from './themeContext';
 const Toggle: FC = () => {
     const { theme, setTheme } = React.useContext(ThemeContext);
 
+    if (!theme) {
+        return <></>;
+    }
+
     return (
         <div className="transition duration-500 ease-in-out rounded-full p-2">
             {theme === 'dark' ? (
