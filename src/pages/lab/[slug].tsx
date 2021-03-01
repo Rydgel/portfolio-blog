@@ -56,7 +56,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         const experiment = await getExperimentBySlug(params.slug);
         return {
             props: { config, experiment },
-            revalidate: 1,
+            revalidate: 300,
         };
     } catch (error) {
         return {

@@ -40,7 +40,7 @@ export const getStaticProps: GetStaticProps = async () => {
     const articles = await getArticles();
     return {
         props: { config, articles },
-        revalidate: 1,
+        revalidate: 300,
     };
 };
 

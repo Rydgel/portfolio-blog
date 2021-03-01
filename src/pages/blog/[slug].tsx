@@ -56,7 +56,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         const article = await getArticleBySlug(params.slug);
         return {
             props: { config, article },
-            revalidate: 1,
+            revalidate: 300,
         };
     } catch (error) {
         return {

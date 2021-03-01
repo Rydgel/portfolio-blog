@@ -65,7 +65,7 @@ export const getStaticProps: GetStaticProps = async () => {
     // see the point of putting it inside the cms right now.
     return {
         props: { config },
-        revalidate: 1,
+        revalidate: 300,
     };
 };
 

@@ -50,7 +50,7 @@ export const getStaticProps: GetStaticProps = async () => {
     const experiments = await getExperiments();
     return {
         props: { config, experiments },
-        revalidate: 1,
+        revalidate: 300,
     };
 };
 
