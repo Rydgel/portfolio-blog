@@ -6,7 +6,7 @@ import ReactMarkdown from 'react-markdown';
 import gfm from 'remark-gfm';
 import { getArticleBySlug, getArticles, getSiteConfig } from '../../lib/strapi';
 import { formatDate } from '../../lib/date_utils';
-import { MyRenderer } from '../../lib/renderer';
+import MySyntax from '../../lib/renderer';
 import Config from '../../interfaces/config';
 import HeadSeo from '../../components/seo/head-seo';
 import urljoin from 'url-join';
@@ -41,7 +41,7 @@ const ArticlePage: FC<ArticleProps> = (props: ArticleProps) => {
                     </time>
                 </header>
                 <section className="prose lg:prose-xl dark:prose-dark dark:lg:prose-xl-dark">
-                    <ReactMarkdown renderers={MyRenderer()} plugins={[gfm]}>
+                    <ReactMarkdown renderers={{code: MySyntax}} plugins={[gfm]}>
                         {props.article.content}
                     </ReactMarkdown>
                 </section>

@@ -5,7 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import gfm from 'remark-gfm';
 import { getExperimentBySlug, getExperiments, getSiteConfig } from '../../lib/strapi';
 import { formatDate } from '../../lib/date_utils';
-import { MyRenderer } from '../../lib/renderer';
+import MySyntax from '../../lib/renderer';
 import Config from '../../interfaces/config';
 import HeadSeo from '../../components/seo/head-seo';
 import urljoin from 'url-join';
@@ -41,7 +41,7 @@ const LabPage: FC<LabProps> = (props: LabProps) => {
                     </time>
                 </header>
                 <section className="prose lg:prose-xl dark:prose-dark dark:lg:dark-prose-xl">
-                    <ReactMarkdown renderers={MyRenderer()} plugins={[gfm]}>
+                    <ReactMarkdown renderers={{code: MySyntax}} plugins={[gfm]}>
                         {props.experiment.content}
                     </ReactMarkdown>
                 </section>
