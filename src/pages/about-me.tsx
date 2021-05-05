@@ -16,6 +16,7 @@ const AboutMePage: FC<AboutMeProps> = (props: AboutMeProps) => {
             <section>
                 <div>
                     <h2 className="text-5xl font-bold block text-center mb-14">About me</h2>
+                    <h3 className="text-2xl block font-bold text-center mb-7">Jérôme Mahuet</h3>
                     <div className="prose lg:prose-xl dark:prose-dark dark:lg:prose-dark-xl">
                         <p className="text-center">
                             Web <em>&amp;</em> mobile developer with a soft spot for typography and functional
