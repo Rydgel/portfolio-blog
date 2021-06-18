@@ -41,7 +41,7 @@ const ArticlePage: FC<ArticleProps> = (props: ArticleProps) => {
                     </time>
                 </header>
                 <section className="prose lg:prose-xl dark:prose-dark dark:lg:prose-xl-dark">
-                    <ReactMarkdown renderers={{code: MySyntax}} plugins={[gfm]}>
+                    <ReactMarkdown renderers={{ code: MySyntax }} plugins={[gfm]}>
                         {props.article.content}
                     </ReactMarkdown>
                 </section>
