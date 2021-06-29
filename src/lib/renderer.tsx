@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import type { CodeComponent } from 'react-markdown/src/ast-to-react';
 
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { hybrid as cstyle } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
@@ -18,19 +18,20 @@ SyntaxHighlighter.registerLanguage('cpp', cpp);
 SyntaxHighlighter.registerLanguage('haskell', haskell);
 SyntaxHighlighter.registerLanguage('rust', rust);
 
-type SyntaxProps = {
-    language?: string;
-    value: JSX.Element;
+type CodeProps = Parameters<CodeComponent>[0];
+
+const renderCodeSyntax = ({ inline, className, children, ...props }: CodeProps): JSX.Element => {
+    const match = /language-(\w+)/.exec(className || '');
+    const content = String(children).replace(/\n$/, '');
+    return !inline && match ? (
+        <SyntaxHighlighter style={cstyle} language={match[1]} wrapLongLines={true} {...props}>
+            {content}
+        </SyntaxHighlighter>
+    ) : (
+        <code className={className} {...props}>
+            {content}
+        </code>
+    );
 };
 
-class MySyntax extends Component<SyntaxProps> {
-    render(): JSX.Element {
-        return (
-            <SyntaxHighlighter style={cstyle} language={this.props.language} wrapLongLines={true}>
-                {this.props.value}
-            </SyntaxHighlighter>
-        );
-    }
-}
-
-export default MySyntax;
+export default renderCodeSyntax;

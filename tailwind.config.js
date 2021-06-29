@@ -21,7 +21,6 @@ module.exports = {
                         strong: theme('colors.gray.700'),
                         code: {
                             'font-family': 'zeitung-mono, monospace',
-                            color: theme('colors.gray.700'),
                         },
                         blockquote: {
                             color: theme('colors.gray.400'),
@@ -63,6 +62,8 @@ module.exports = {
                         pre: {
                             'font-family': 'zeitung-mono, monospace',
                             'font-size': '15px !important',
+                            'margin': '0',
+                            'padding': '0',
                         },
                     },
                 },
@@ -73,7 +74,7 @@ module.exports = {
                         strong: theme('colors.gray.400'),
                         code: {
                             'font-family': 'zeitung-mono, monospace',
-                            color: theme('colors.gray.400'),
+                            color: theme('colors.gray.300'),
                         },
                         blockquote: {
                             color: theme('colors.gray.700'),
@@ -118,6 +119,30 @@ module.exports = {
                         pre: {
                             'font-family': 'zeitung-mono, monospace',
                             'font-size': '15px !important',
+                            'margin': '0',
+                            'padding': '0',
+                        },
+                    },
+                },
+
+                lg: {
+                    css: {
+                        pre: {
+                            'font-family': 'zeitung-mono, monospace',
+                            'font-size': '15px !important',
+                            'margin': '0',
+                            'padding': '0',
+                        },
+                    },
+                },
+
+                xl: {
+                    css: {
+                        pre: {
+                            'font-family': 'zeitung-mono, monospace',
+                            'font-size': '15px !important',
+                            'margin': '0',
+                            'padding': '0',
                         },
                     },
                 },
