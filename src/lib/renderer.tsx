@@ -20,17 +20,15 @@ SyntaxHighlighter.registerLanguage('rust', rust);
 
 type CodeProps = Parameters<CodeComponent>[0];
 
-const renderCodeSyntax = ({ inline, className, children, ...props }: CodeProps): JSX.Element => {
+const renderCodeSyntax = ({ inline, className, children }: CodeProps): JSX.Element => {
     const match = /language-(\w+)/.exec(className || '');
     const content = String(children).replace(/\n$/, '');
     return !inline && match ? (
-        <SyntaxHighlighter style={cstyle} language={match[1]} wrapLongLines={true} {...props}>
+        <SyntaxHighlighter style={cstyle} language={match[1]} wrapLongLines={true}>
             {content}
         </SyntaxHighlighter>
     ) : (
-        <code className={className} {...props}>
-            {content}
-        </code>
+        <code className={className}>{content}</code>
     );
 };
 
