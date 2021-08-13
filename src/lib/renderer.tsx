@@ -1,4 +1,4 @@
-import type { CodeComponent } from 'react-markdown/src/ast-to-react';
+import type { CodeComponent } from 'react-markdown/lib/ast-to-react';
 
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { hybrid as cstyle } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
