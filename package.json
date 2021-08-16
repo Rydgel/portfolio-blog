@@ -49,5 +49,6 @@
     "build-prod": "run-s clean build export",
     "clean": "rimraf .next dist",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ."
-  }
+  },
+  "packageManager": "yarn@3.0.1"
 }
