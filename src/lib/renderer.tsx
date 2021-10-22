@@ -1,4 +1,4 @@
-import type { CodeComponent } from 'react-markdown/lib/ast-to-react';
+import type { CodeProps } from 'react-markdown/lib/ast-to-react';
 
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { hybrid as cstyle } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
@@ -17,8 +17,6 @@ SyntaxHighlighter.registerLanguage('bash', bash);
 SyntaxHighlighter.registerLanguage('cpp', cpp);
 SyntaxHighlighter.registerLanguage('haskell', haskell);
 SyntaxHighlighter.registerLanguage('rust', rust);
-
-type CodeProps = Parameters<CodeComponent>[0];
 
 const renderCodeSyntax = ({ inline, className, children }: CodeProps): JSX.Element => {
     const match = /language-(\w+)/.exec(className || '');
