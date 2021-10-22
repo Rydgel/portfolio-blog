@@ -13,16 +13,14 @@ const App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
     }, []);
 
     // we skip theme detection for SSR
-    if (!isMounted) {
-        return <Component {...pageProps} />;
-    } else {
-        return (
-            <ThemeProvider>
-                <Umami />
-                {isMounted && <Component {...pageProps} />}
-            </ThemeProvider>
-        );
-    }
+    return !isMounted ? (
+        <Component {...pageProps} />
+    ) : (
+        <ThemeProvider>
+            <Umami />
+            {isMounted && <Component {...pageProps} />}
+        </ThemeProvider>
+    );
 };
 
 export default App;
