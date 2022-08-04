@@ -16,7 +16,7 @@ type LayoutProps = {
 
 class Layout extends Component<LayoutProps> {
     headerImage(): JSX.Element {
-        if (this.props.headerImage) {
+        if (this.props.headerImage && this.props.config) {
             const src = urljoin(this.props.config.strapi_url, this.props.headerImage.url);
 
             return (
