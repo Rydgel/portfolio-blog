@@ -9,7 +9,6 @@ import { formatDate } from '../../lib/date_utils';
 import MySyntax from '../../lib/renderer';
 import Config from '../../interfaces/config';
 import HeadSeo from '../../components/seo/head-seo';
-import urljoin from 'url-join';
 
 type ArticleProps = {
     config: Config;
@@ -17,14 +16,8 @@ type ArticleProps = {
 };
 
 const ArticlePage: FC<ArticleProps> = (props: ArticleProps) => {
-    const headerImage = () => {
-        if (props.article.image) {
-            const srcImg = urljoin(props.config.strapi_url, props.article.image.url);
-            return srcImg;
-        }
-    };
     return (
-        <Layout page="article" headerImage={headerImage()}>
+        <Layout page="article" headerImage={props.article.image} config={props.config}>
             <HeadSeo
                 config={props.config}
                 postNode={props.article}

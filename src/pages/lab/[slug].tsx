@@ -8,7 +8,6 @@ import { formatDate } from '../../lib/date_utils';
 import MySyntax from '../../lib/renderer';
 import Config from '../../interfaces/config';
 import HeadSeo from '../../components/seo/head-seo';
-import urljoin from 'url-join';
 import Experiment from '../../interfaces/experiment';
 
 type LabProps = {
@@ -17,14 +16,8 @@ type LabProps = {
 };
 
 const LabPage: FC<LabProps> = (props: LabProps) => {
-    const headerImage = () => {
-        if (props.experiment.image) {
-            const srcImg = urljoin(props.config.strapi_url, props.experiment.image.url);
-            return srcImg;
-        }
-    };
     return (
-        <Layout page="experiment" headerImage={headerImage()}>
+        <Layout page="experiment" headerImage={props.experiment.image} config={props.config}>
             <HeadSeo
                 config={props.config}
                 postNode={props.experiment}

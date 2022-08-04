@@ -15,7 +15,7 @@ type ArticlePageProps = {
 
 const ArticlePage: FC<ArticlePageProps> = (props: ArticlePageProps) => {
     return (
-        <Layout page="articles">
+        <Layout page="articles" config={props.config}>
             <HeadSeo config={props.config} postSEO={false} />
             <section>
                 <h2 className="text-5xl font-bold block text-center mb-14">Articles</h2>

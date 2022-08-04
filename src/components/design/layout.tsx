@@ -2,26 +2,34 @@ import { Component } from 'react';
 import Header from './header';
 import Footer from './footer';
 import Toggle from '../theme/themeToggle';
-import Image from 'next/future/image';
+import Image from 'next/image';
+import ImageStrapi from '../../interfaces/image';
+import urljoin from 'url-join';
+import Config from '../../interfaces/config';
 
 type LayoutProps = {
     page: string;
-    headerImage?: string;
+    config?: Config;
+    headerImage?: ImageStrapi;
     children?: React.ReactNode;
 };
 
 class Layout extends Component<LayoutProps> {
     headerImage(): JSX.Element {
-        return (
-            <figure className="mb-8">
-                <Image
-                    className="max-w-full lg:max-w-5xl rounded-md mx-auto dark:opacity-90"
-                    src={this.props.headerImage}
-                    width="1024"
-                    height="1024"
-                />
-            </figure>
-        );
+        if (this.props.headerImage) {
+            const src = urljoin(this.props.config.strapi_url, this.props.headerImage.url);
+
+            return (
+                <figure className="mb-8 max-w-full lg:max-w-5xl mx-auto">
+                    <Image
+                        className="rounded-md dark:opacity-90"
+                        src={src}
+                        width={this.props.headerImage.width}
+                        height={this.props.headerImage.height}
+                    />
+                </figure>
+            );
+        }
     }
 
     render(): JSX.Element {
