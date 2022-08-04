@@ -1,5 +1,6 @@
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
+import Image from 'next/future/image';
 import React, { FC } from 'react';
 import urljoin from 'url-join';
 import Layout from '../components/design/layout';
@@ -29,7 +30,12 @@ const LabPage: FC<LabPageProps> = (props: LabPageProps) => {
                         return (
                             <div key={`article_lab_id_${experiment.id}`} className="mb-16 w-full relative">
                                 <Link href={`/lab/${experiment.slug}`}>
-                                    <img src={headerImage()} className="rounded-md cursor-pointer dark:opacity-90" />
+                                    <Image
+                                        src={headerImage()}
+                                        className="rounded-md cursor-pointer dark:opacity-90"
+                                        width="1024"
+                                        height="1024"
+                                    />
                                 </Link>
                                 <div className="prose lg:prose-xl dark:prose-dark lg:dark:prose-xl-dark bottom-0 w-full pt-3">
                                     <span className="text-2xl font-medium capitalize">{experiment.title}</span>

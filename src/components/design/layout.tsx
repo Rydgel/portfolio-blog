@@ -2,6 +2,7 @@ import { Component } from 'react';
 import Header from './header';
 import Footer from './footer';
 import Toggle from '../theme/themeToggle';
+import Image from 'next/future/image';
 
 type LayoutProps = {
     page: string;
@@ -13,9 +14,11 @@ class Layout extends Component<LayoutProps> {
     headerImage(): JSX.Element {
         return (
             <figure className="mb-8">
-                <img
+                <Image
                     className="max-w-full lg:max-w-5xl rounded-md mx-auto dark:opacity-90"
                     src={this.props.headerImage}
+                    width="1024"
+                    height="1024"
                 />
             </figure>
         );
