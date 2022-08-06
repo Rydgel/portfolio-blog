@@ -29,6 +29,8 @@ const LabPage: FC<LabPageProps> = (props: LabPageProps) => {
                                     className="rounded-md cursor-pointer dark:opacity-90"
                                     width={experiment.image?.width}
                                     height={experiment.image?.height}
+                                    blurDataURL="URL"
+                                    placeholder="blur"
                                 />
                             );
                         });

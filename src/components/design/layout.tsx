@@ -26,6 +26,8 @@ class Layout extends Component<LayoutProps> {
                         src={src}
                         width={this.props.headerImage.width}
                         height={this.props.headerImage.height}
+                        blurDataURL="URL"
+                        placeholder="blur"
                     />
                 </figure>
             );
