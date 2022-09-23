@@ -1,6 +1,6 @@
 import Image from './image';
 
-type Config = {
+interface Config {
     site_title: string;
     site_title_short: string;
     site_title_alt?: string;
@@ -13,6 +13,6 @@ type Config = {
     site_fb_app?: string;
     user_twitter?: string;
     ga?: string;
-};
+}
 
 export default Config;
