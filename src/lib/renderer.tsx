@@ -10,6 +10,7 @@ import monkey from 'react-syntax-highlighter/dist/cjs/languages/prism/monkey';
 import bash from 'react-syntax-highlighter/dist/cjs/languages/prism/bash';
 import markdown from 'react-syntax-highlighter/dist/cjs/languages/prism/markdown';
 import json from 'react-syntax-highlighter/dist/cjs/languages/prism/json';
+import haskell from 'react-syntax-highlighter/dist/cjs/languages/prism/haskell';
 
 SyntaxHighlighter.registerLanguage('tsx', tsx);
 SyntaxHighlighter.registerLanguage('typescript', typescript);
@@ -20,6 +21,7 @@ SyntaxHighlighter.registerLanguage('html', markup);
 SyntaxHighlighter.registerLanguage('bash', bash);
 SyntaxHighlighter.registerLanguage('markdown', markdown);
 SyntaxHighlighter.registerLanguage('json', json);
+SyntaxHighlighter.registerLanguage('haskell', haskell);
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const renderCodeSyntax = ({ node, inline, className, children, ...props }): JSX.Element => {
