@@ -10,4 +10,4 @@ body {
     font-family: zeitung-mono, monospace;
 }
 
-span.linenumber { display: none; }
+span.linenumber { display: none !important; }
