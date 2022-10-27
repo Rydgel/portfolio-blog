@@ -28,6 +28,7 @@ class Layout extends Component<LayoutProps> {
                         height={this.props.headerImage.height}
                         blurDataURL="URL"
                         placeholder="blur"
+                        alt="Jérôme Mahuet's Blog"
                     />
                 </figure>
             );

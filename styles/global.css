@@ -2,8 +2,6 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@import url("https://use.typekit.net/pjh1zlv.css");
-
 body {
     font-family: zeitung, sans-serif;
 }

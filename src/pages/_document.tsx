@@ -52,7 +52,9 @@ export default class MyDocument extends Document {
     render(): JSX.Element {
         return (
             <Html lang="en">
-                <Head />
+                <Head>
+                    <link href="https://use.typekit.net/pjh1zlv.css" rel="stylesheet" />
+                </Head>
                 <body>
                     <script
                         dangerouslySetInnerHTML={{

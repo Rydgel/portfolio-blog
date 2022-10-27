@@ -31,6 +31,7 @@ const LabPage: FC<LabPageProps> = (props: LabPageProps) => {
                                     height={experiment.image?.height}
                                     blurDataURL="URL"
                                     placeholder="blur"
+                                    alt={experiment.title}
                                 />
                             );
                         });
