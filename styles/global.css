@@ -9,3 +9,5 @@ body {
 .typewriter {
     font-family: zeitung-mono, monospace;
 }
+
+span.linenumber { display: none; }
