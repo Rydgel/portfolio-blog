@@ -1,4 +1,3 @@
-import axios from 'axios';
 import Category from '../interfaces/category';
 import Config from '../interfaces/config';
 import Experiment from '../interfaces/experiment';
@@ -15,46 +14,55 @@ const API_ROOT = () => {
 };
 
 export async function getSiteConfig(): Promise<Config> {
-    const response = await axios.get<Config>(`${API_ROOT()}/config`);
-    return response.data;
+    const request = await fetch(`${API_ROOT()}/config`);
+    const response = await request.json();
+    return response;
 }
 
 export async function getArticles(): Promise<Post[]> {
-    const response = await axios.get<Post[]>(`${API_ROOT()}/articles?_sort=display_time:DESC`);
-    return response.data;
+    const request = await fetch(`${API_ROOT()}/articles?_sort=display_time:DESC`);
+    const response = await request.json();
+    return response;
 }
 
 export async function getRecentArticles(): Promise<Post[]> {
-    const response = await axios.get<Post[]>(`${API_ROOT()}/articles?_limit=5&_sort=display_time:DESC`);
-    return response.data;
+    const request = await fetch(`${API_ROOT()}/articles?_limit=5&_sort=display_time:DESC`);
+    const response = await request.json();
+    return response;
 }
 
 export async function getArticleBySlug(slug: string | string[]): Promise<Post> {
-    const response = await axios.get<Post[]>(`${API_ROOT()}/articles?slug=${slug}`);
-    return response.data[0];
+    const request = await fetch(`${API_ROOT()}/articles?slug=${slug}`);
+    const response = await request.json();
+    return response[0];
 }
 
 export async function getArticlesByCategory(cat: string): Promise<Post[]> {
-    const response = await axios.get<Post[]>(`${API_ROOT()}/articles?categories.name=${cat}`);
-    return response.data;
+    const request = await fetch(`${API_ROOT()}/articles?categories.name=${cat}`);
+    const response = await request.json();
+    return response;
 }
 
 export async function getExperiments(): Promise<Experiment[]> {
-    const response = await axios.get<Experiment[]>(`${API_ROOT()}/experiments?_sort=display_time:DESC`);
-    return response.data;
+    const request = await fetch(`${API_ROOT()}/experiments?_sort=display_time:DESC`);
+    const response = await request.json();
+    return response;
 }
 
 export async function getRecentExperiments(): Promise<Experiment[]> {
-    const response = await axios.get<Experiment[]>(`${API_ROOT()}/experiments?_limit=5&_sort=display_time:DESC`);
-    return response.data;
+    const request = await fetch(`${API_ROOT()}/experiments?_limit=5&_sort=display_time:DESC`);
+    const response = await request.json();
+    return response;
 }
 
 export async function getExperimentBySlug(slug: string | string[]): Promise<Experiment> {
-    const response = await axios.get<Experiment[]>(`${API_ROOT()}/experiments?slug=${slug}`);
-    return response.data[0];
+    const request = await fetch(`${API_ROOT()}/experiments?slug=${slug}`);
+    const response = await request.json();
+    return response[0];
 }
 
 export async function getCategories(): Promise<Category[]> {
-    const response = await axios.get<Category[]>(`${API_ROOT()}/categories`);
-    return response.data;
+    const request = await fetch(`${API_ROOT()}/categories`);
+    const response = await request.json();
+    return response;
 }
