@@ -1,11 +1,11 @@
-import { Component } from 'react';
-import Header from './header';
-import Footer from './footer';
-import Toggle from '../theme/themeToggle';
+import Footer from '@components/design/footer';
+import Header from '@components/design/header';
+import Toggle from '@components/theme/themeToggle';
+import Config from '@interfaces/config';
+import ImageStrapi from '@interfaces/image';
 import Image from 'next/image';
-import ImageStrapi from '../../interfaces/image';
+import { Component } from 'react';
 import urljoin from 'url-join';
-import Config from '../../interfaces/config';
 
 type LayoutProps = {
     page: string;

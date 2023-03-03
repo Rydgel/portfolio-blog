@@ -1,16 +1,16 @@
 import rangeParser from 'parse-numeric-range';
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
-import nord from 'react-syntax-highlighter/dist/cjs/styles/prism/nord';
+import bash from 'react-syntax-highlighter/dist/cjs/languages/prism/bash';
+import cpp from 'react-syntax-highlighter/dist/cjs/languages/prism/cpp';
+import haskell from 'react-syntax-highlighter/dist/cjs/languages/prism/haskell';
+import json from 'react-syntax-highlighter/dist/cjs/languages/prism/json';
+import markdown from 'react-syntax-highlighter/dist/cjs/languages/prism/markdown';
 import markup from 'react-syntax-highlighter/dist/cjs/languages/prism/markup';
+import monkey from 'react-syntax-highlighter/dist/cjs/languages/prism/monkey';
+import rust from 'react-syntax-highlighter/dist/cjs/languages/prism/rust';
 import tsx from 'react-syntax-highlighter/dist/cjs/languages/prism/tsx';
 import typescript from 'react-syntax-highlighter/dist/cjs/languages/prism/typescript';
-import rust from 'react-syntax-highlighter/dist/cjs/languages/prism/rust';
-import cpp from 'react-syntax-highlighter/dist/cjs/languages/prism/cpp';
-import monkey from 'react-syntax-highlighter/dist/cjs/languages/prism/monkey';
-import bash from 'react-syntax-highlighter/dist/cjs/languages/prism/bash';
-import markdown from 'react-syntax-highlighter/dist/cjs/languages/prism/markdown';
-import json from 'react-syntax-highlighter/dist/cjs/languages/prism/json';
-import haskell from 'react-syntax-highlighter/dist/cjs/languages/prism/haskell';
+import nord from 'react-syntax-highlighter/dist/cjs/styles/prism/nord';
 
 SyntaxHighlighter.registerLanguage('tsx', tsx);
 SyntaxHighlighter.registerLanguage('typescript', typescript);

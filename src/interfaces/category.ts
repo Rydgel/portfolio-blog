@@ -1,4 +1,4 @@
-import Post from './post';
+import Post from '@interfaces/post';
 
 interface Category {
     id: string;

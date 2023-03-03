@@ -1,8 +1,8 @@
+import Content from '@interfaces/content';
+import { getArticles, getExperiments } from '@lib/strapi';
 import { GetServerSideProps } from 'next';
 import { FC } from 'react';
 import beautifier from 'xml-beautifier';
-import Content from '../interfaces/content';
-import { getArticles, getExperiments } from '../lib/strapi';
 
 const Sitemap: FC = () => null;
 

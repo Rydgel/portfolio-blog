@@ -1,9 +1,9 @@
+import Layout from '@components/design/layout';
+import HeadSeo from '@components/seo/head-seo';
+import Config from '@interfaces/config';
+import { getSiteConfig } from '@lib/strapi';
 import { GetStaticProps } from 'next';
 import React, { FC } from 'react';
-import Layout from '../components/design/layout';
-import { getSiteConfig } from '../lib/strapi';
-import HeadSeo from '../components/seo/head-seo';
-import Config from '../interfaces/config';
 
 type AboutMeProps = {
     config: Config;

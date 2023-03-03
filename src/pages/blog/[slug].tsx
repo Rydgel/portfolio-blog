@@ -1,14 +1,14 @@
+import Layout from '@components/design/layout';
+import HeadSeo from '@components/seo/head-seo';
+import Config from '@interfaces/config';
+import Post from '@interfaces/post';
+import { formatDate } from '@lib/date_utils';
+import MySyntax from '@lib/renderer';
+import { getArticleBySlug, getArticles, getSiteConfig } from '@lib/strapi';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import React, { FC } from 'react';
-import Post from '../../interfaces/post';
-import Layout from '../../components/design/layout';
 import ReactMarkdown from 'react-markdown';
 import gfm from 'remark-gfm';
-import { getArticleBySlug, getArticles, getSiteConfig } from '../../lib/strapi';
-import { formatDate } from '../../lib/date_utils';
-import MySyntax from '../../lib/renderer';
-import Config from '../../interfaces/config';
-import HeadSeo from '../../components/seo/head-seo';
 
 type ArticleProps = {
     config: Config;

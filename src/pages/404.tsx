@@ -1,6 +1,6 @@
-import React, { FC } from 'react';
+import Layout from '@components/design/layout';
 import Head from 'next/head';
-import Layout from '../components/design/layout';
+import React, { FC } from 'react';
 
 const NotFoundPage: FC = () => {
     return (

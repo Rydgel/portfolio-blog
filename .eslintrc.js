@@ -8,6 +8,7 @@ module.exports = {
         'prettier',
         'plugin:@next/next/recommended',
     ],
+    plugins: ['simple-import-sort'],
     parserOptions: {
         ecmaVersion: 2022,
         sourceType: 'module',
@@ -15,6 +16,8 @@ module.exports = {
     },
     rules: {
         'react/react-in-jsx-scope': 'off',
+        'simple-import-sort/imports': 'error',
+        'simple-import-sort/exports': 'error',
     },
     settings: { react: { version: 'detect' } },
 };

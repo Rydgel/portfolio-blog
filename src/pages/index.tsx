@@ -1,14 +1,14 @@
+import Layout from '@components/design/layout';
+import HeadSeo from '@components/seo/head-seo';
+import Config from '@interfaces/config';
+import Experiment from '@interfaces/experiment';
+import Post from '@interfaces/post';
+import { formatDate } from '@lib/date_utils';
+import { getRecentArticles, getRecentExperiments, getSiteConfig } from '@lib/strapi';
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import React, { FC } from 'react';
-import Layout from '../components/design/layout';
-import Post from '../interfaces/post';
 import ReactMarkdown from 'react-markdown';
-import { getRecentArticles, getRecentExperiments, getSiteConfig } from '../lib/strapi';
-import { formatDate } from '../lib/date_utils';
-import HeadSeo from '../components/seo/head-seo';
-import Config from '../interfaces/config';
-import Experiment from '../interfaces/experiment';
 
 type IndexProps = {
     config: Config;

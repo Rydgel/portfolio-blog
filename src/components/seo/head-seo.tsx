@@ -1,9 +1,9 @@
-import { Component } from 'react';
+import Config from '@interfaces/config';
+import Experiment from '@interfaces/experiment';
+import Post from '@interfaces/post';
 import Head from 'next/head';
+import { Component } from 'react';
 import urljoin from 'url-join';
-import Config from '../../interfaces/config';
-import Post from '../../interfaces/post';
-import Experiment from '../../interfaces/experiment';
 
 type HeadSeoProps = {
     config: Config;

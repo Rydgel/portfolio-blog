@@ -1,6 +1,6 @@
-import Category from './category';
-import Content from './content';
-import Image from './image';
+import Category from '@interfaces/category';
+import Content from '@interfaces/content';
+import Image from '@interfaces/image';
 
 interface Post extends Content {
     id: number;

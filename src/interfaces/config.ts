@@ -1,4 +1,4 @@
-import Image from './image';
+import Image from '@interfaces/image';
 
 interface Config {
     site_title: string;

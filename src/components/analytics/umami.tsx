@@ -1,5 +1,5 @@
-import { FC } from 'react';
 import Script from 'next/script';
+import { FC } from 'react';
 
 const Umami: FC = () => {
     return (

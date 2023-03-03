@@ -1,13 +1,13 @@
+import Layout from '@components/design/layout';
+import HeadSeo from '@components/seo/head-seo';
+import Config from '@interfaces/config';
+import Experiment from '@interfaces/experiment';
+import { getExperiments, getSiteConfig } from '@lib/strapi';
 import { GetStaticProps } from 'next';
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { FC } from 'react';
 import urljoin from 'url-join';
-import Layout from '../components/design/layout';
-import HeadSeo from '../components/seo/head-seo';
-import Config from '../interfaces/config';
-import Experiment from '../interfaces/experiment';
-import { getExperiments, getSiteConfig } from '../lib/strapi';
 
 type LabPageProps = {
     config: Config;

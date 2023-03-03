@@ -1,7 +1,7 @@
-import Category from '../interfaces/category';
-import Config from '../interfaces/config';
-import Experiment from '../interfaces/experiment';
-import Post from '../interfaces/post';
+import Category from '@interfaces/category';
+import Config from '@interfaces/config';
+import Experiment from '@interfaces/experiment';
+import Post from '@interfaces/post';
 
 const API_ROOT = () => {
     /*const environment = process.env.NODE_ENV || 'development';
