@@ -3,7 +3,7 @@ import '../../styles/global.css';
 
 import Umami from '@components/analytics/umami';
 import { ThemeProvider } from '@components/theme/themeContext';
-import { AppProps } from 'next/app';
+import type { AppProps } from 'next/app';
 import { FC, useEffect, useState } from 'react';
 
 const App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
