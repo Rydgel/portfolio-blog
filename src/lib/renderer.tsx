@@ -1,27 +1,9 @@
 import rangeParser from 'parse-numeric-range';
-import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
-import bash from 'react-syntax-highlighter/dist/cjs/languages/prism/bash';
-import cpp from 'react-syntax-highlighter/dist/cjs/languages/prism/cpp';
-import haskell from 'react-syntax-highlighter/dist/cjs/languages/prism/haskell';
-import json from 'react-syntax-highlighter/dist/cjs/languages/prism/json';
-import markdown from 'react-syntax-highlighter/dist/cjs/languages/prism/markdown';
-import markup from 'react-syntax-highlighter/dist/cjs/languages/prism/markup';
-import monkey from 'react-syntax-highlighter/dist/cjs/languages/prism/monkey';
-import rust from 'react-syntax-highlighter/dist/cjs/languages/prism/rust';
-import tsx from 'react-syntax-highlighter/dist/cjs/languages/prism/tsx';
-import typescript from 'react-syntax-highlighter/dist/cjs/languages/prism/typescript';
+import React from 'react';
+import { Prism, SyntaxHighlighterProps } from 'react-syntax-highlighter';
 import nord from 'react-syntax-highlighter/dist/cjs/styles/prism/nord';
 
-SyntaxHighlighter.registerLanguage('tsx', tsx);
-SyntaxHighlighter.registerLanguage('typescript', typescript);
-SyntaxHighlighter.registerLanguage('rust', rust);
-SyntaxHighlighter.registerLanguage('cpp', cpp);
-SyntaxHighlighter.registerLanguage('monkey', monkey);
-SyntaxHighlighter.registerLanguage('html', markup);
-SyntaxHighlighter.registerLanguage('bash', bash);
-SyntaxHighlighter.registerLanguage('markdown', markdown);
-SyntaxHighlighter.registerLanguage('json', json);
-SyntaxHighlighter.registerLanguage('haskell', haskell);
+const SyntaxHighlighter = Prism as typeof React.Component<SyntaxHighlighterProps>;
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const renderCodeSyntax = ({ node, inline, className, children, ...props }): JSX.Element => {

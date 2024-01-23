@@ -1,6 +1,12 @@
 module.exports = {
     reactStrictMode: true,
     images: {
-        domains: ['api.jeromem.dev'],
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: '**.jeromem.dev',
+                port: '',
+            },
+        ]
     }
 }
